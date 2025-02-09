@@ -1,0 +1,136 @@
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        body {
+            margin: 0;
+            background-color: #000;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        /* Hiệu ứng Hologram */
+        .hologram {
+            position: fixed;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            background: rgba(0, 255, 255, 0.2);
+            border: 2px solid rgba(0, 255, 255, 0.5);
+            color: cyan;
+            font-size: 18px;
+            text-align: center;
+            border-radius: 5px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Thông báo khi vào trang */
+        .notification {
+            position: fixed;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255, 0, 0, 0.8);
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            animation: fadeIn 0.5s ease-in-out;
+            z-index: 1000;
+        }
+
+        .notification button {
+            margin-left: 10px;
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /* Icon tròn */
+        .menu-icon {
+            position: fixed;
+            bottom: 50px;
+            left: 50px;
+            width: 50px;
+            height: 50px;
+            background-image: url('https://i.imgur.com/6s05cm8.png');
+            background-size: cover;
+            border-radius: 50%;
+            cursor: grab;
+            z-index: 1000;
+        }
+
+        /* Menu */
+        .menu {
+            position: fixed;
+            bottom: 100px;
+            left: 50px;
+            width: 260px;
+            background: rgba(20, 20, 20, 0.95);
+            padding: 15px;
+            border-radius: 10px;
+            border: 2px solid cyan;
+            box-shadow: 0 0 10px cyan;
+            display: none;
+            transition: opacity 0.3s ease-in-out;
+            cursor: grab;
+            z-index: 999;
+        }
+
+        .menu.active {
+            display: block;
+        }
+
+        /* Checkbox */
+        .menu label {
+            display: flex;
+            align-items: center;
+            background: black;
+            color: white;
+            padding: 8px;
+            margin: 5px 0;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .menu label:hover {
+            background: #333;
+        }
+
+        input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: black;
+    border: 2px solid black;
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+}
+
+input[type="checkbox"]:checked {
+    background: url('https://media0.giphy.com/media/Mf8Fh1MFTjTvk28GKP/200w.gif?cid=6c09b952w6ff3rlust6ez6yblimnmv4nc5mgbad5movou9jy&ep=v1_gifs_search&rid=200w.gif&ct=g') no-repeat center center;
+    background-size: cover;
+}
+        /* Thông báo */
+        .status {
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: red;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+   
